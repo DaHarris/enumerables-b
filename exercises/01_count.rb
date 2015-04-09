@@ -1,4 +1,5 @@
 def count(words, &block)
+  words.inject(0) {|sum, word| block.call(word) ? sum+=1 : sum}
 end
 
 # ------ code above this line ------
