@@ -1,4 +1,7 @@
-
+def find(input, &block)
+  input.each{|hash| return hash if block.call(hash)}
+  nil
+end
 
 # ------ code above this line ------
 
