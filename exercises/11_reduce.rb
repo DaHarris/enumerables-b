@@ -1,4 +1,6 @@
-
+def reduce(input, sum, &block)
+  input.inject(sum) {|acc, item| block.call(acc, item) }
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'
