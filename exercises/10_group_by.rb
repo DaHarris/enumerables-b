@@ -1,4 +1,14 @@
-
+def group_by(input, &block)
+  return_hash = {}
+  input.each do |x|
+    if return_hash.has_key?(block.call(x))
+      return_hash[block.call(x)] << x
+    else
+      return_hash[block.call(x)] = [x]
+    end
+  end
+  return return_hash
+end
 
 # ------ code above this line ------
 
