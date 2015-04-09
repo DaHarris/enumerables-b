@@ -1,4 +1,7 @@
-
+def any?(input, &block)
+  input.each{|item| return true if block.call(item)}
+  false
+end
 
 # ------ code above this line ------
 
