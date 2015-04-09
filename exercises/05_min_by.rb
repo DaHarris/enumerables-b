@@ -1,4 +1,5 @@
 def min_by(items, &block)
+  items.inject {|acc, item| block.call(acc) > block.call(item) ? acc = item : acc }
 end
 
 # ------ code above this line ------
