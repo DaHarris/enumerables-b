@@ -1,4 +1,5 @@
 def map(items, &block)
+  items.map {|item| block.call(item)}
 end
 
 # ------ code above this line ------
