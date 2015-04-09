@@ -1,4 +1,5 @@
 def select(items, &block)
+  items.map {|item| item if block.call(item)}.compact
 end
 
 # ------ code above this line ------
